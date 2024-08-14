@@ -8,13 +8,13 @@ const Carousel = () => {
   const [isHovered, setIsHovered] = useState(false);
   const img = [
     {
-      imgurl: "assets/1.png"
+      imgurl: "assets/1.webp"
     },
     {
-      imgurl: "assets/2.png"
+      imgurl: "assets/2.webp"
     },
     {
-      imgurl: "assets/3.png"
+      imgurl: "assets/3.webp"
     },
 
   ];
@@ -65,7 +65,7 @@ const Carousel = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="relative h-40 overflow-hidden rounded-lg md:h-64">
+        <div className="relative h-40 overflow-hidden bg-black rounded-lg md:h-64">
           {img.map((im, index) => (
             <div
               key={index}
@@ -74,7 +74,7 @@ const Carousel = () => {
             >
               <img
                 src={im.imgurl}
-                className="absolute block w-[100%] h-[100%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                className="absolute block w-[100%] h-[100%] lg:w-[60%] lg:h-[100%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
 
 
